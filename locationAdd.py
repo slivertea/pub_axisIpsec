@@ -13,7 +13,7 @@ tunnels = {}
 # Post  payload
 # Adding new locations
 locations = ["API Location1a", "API Location2a", "API Location1c"]
-# To import by CSV, uncomment the following section, and add conetns to importLocations.csv file:
+# To import by CSV, uncomment the following section, and add contents to importLocations.csv file:
 #locations = []
 #fileCSV='importLocations.csv'
 #with open(fileCSV, mode = 'r') as fh:
