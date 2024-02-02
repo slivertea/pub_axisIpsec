@@ -21,4 +21,7 @@ _Repository Files_
 3. python3
 4. pytnon3 modules for "os, csv, requests, json
 
-   
+## values to replace
+* All referencees to acme.local, acme.com, etc.  (all credentials are deliberately fictional to replace)
+* All id values referenced "x"
+* Any custom data sources in the csv files such as location name, sub location name, and subnets.
