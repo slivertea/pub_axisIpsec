@@ -10,7 +10,7 @@ params = ''
 uri = path+method
 locations = {}
 tunnels = {}
-# Post  payload
+
 # Adding new locations
 locations = ["API Location1a", "API Location2a", "API Location1c"]
 # To import by CSV, uncomment the following section, and add contents to importLocations.csv file:

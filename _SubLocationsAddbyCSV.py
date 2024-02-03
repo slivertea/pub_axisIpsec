@@ -28,15 +28,13 @@ with open(fileCSV, mode = 'r') as fh:
 #STEP1 - Collect existing Locations
 # Collect the location data
 locations = (requests.request("GET", locationsUrl, headers=headers, data=payload).json())
-# parse the location data
+# parse the location data into a usable dictionary
 locationDict = {}
 for result in locations["data"]:
-    print ("..........", result["name"])
     locationData = {"name": "","id": ""}
     locationDict[locationData["name"]] = {}
     locationData["name"] = result["name"]
     locationData["id"] = result["id"]
-    #print (locationData)
     locationDict[locationData["name"]] = locationData
 
 
@@ -46,6 +44,7 @@ for result in locations["data"]:
 #Validate the import has a matching location, and assume false for reporting after.
 results = {}
 for importRow in importData:
+    # set the iterable data set for the final stages
     results[importRow["subLocationName"]] = {"apiResponse": None, "isValidParent": False, "locationId": None, "subLocationName": importRow["subLocationName"],"inputData": importRow, "resultDetails": None}
     if importRow["parentLocationName"] in locationDict.keys():
         subLocationName = importRow["parentLocationName"]
@@ -62,8 +61,8 @@ for key in results:
     if results[key]["isValidParent"]:
         locationId = results[key]["locationId"]
         subName = results[key]["subLocationName"]
+        # ipRanges in the body expect a single index in the array, as a string
         subSubnets = [str(results[key]["inputData"]["subLocationSubnet"])]
-        print ("subnets:", subSubnets)
         subBody = {
             "name":subName,
             "ipRanges": subSubnets

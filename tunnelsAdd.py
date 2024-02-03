@@ -14,10 +14,10 @@ tunnels = {}
 
 # Post  payload example
 jsonPayload = {
-"name":"API_location1 - Tunnelzz",
-"authenticationID":"zaphod@acme.com",
-"authenticationPSK":"itSa$ecr4t",
-locationId
+    "name":"API_location1 - Tunnelzz",
+    "authenticationID":"zaphod@acme.com",
+    "authenticationPSK":"itSa$ecr4t",
+    locationId
 }
 
 payload = json.dumps(jsonPayload)
