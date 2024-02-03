@@ -2,31 +2,38 @@ import json
 import requests
 import os
 
-TOKEN = os.getenv('AXIS_TOKEN')
+TOKEN = os.getenv('VLAB_TOKEN')
 apiToken = 'Bearer '+TOKEN
 path = "https://admin-api.axissecurity.com/api/v1.0/"
+# Use locationGet.py to collect this, or browser debug method "tunnels" matching the desired location
+#locationId = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+locationId = "4c44bac5-96b6-495a-abb6-2dcd11a501ef"
 method = 'tunnels/'
 params = ''
-locationId = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 uri = path+method
-locations = {}
-tunnels = {}
 
-# Post  payload example
-jsonPayload = {
-    "name":"API_location1 - Tunnelzz",
-    "authenticationID":"zaphod@acme.com",
-    "authenticationPSK":"itSa$ecr4t",
-    locationId
-}
+tunnels = {"API_location1"}
 
-payload = json.dumps(jsonPayload)
+# Post  payload
+# array test
+
 
 headers = {
-  'Authorization': apiToken,
-  'Content-Type': 'application/json'
+    'Authorization': apiToken,
+    'Content-Type': 'application/json'
 }
-print (uri)
-response = requests.request("POST", uri, headers=headers, data=payload)
+# test subnet range
 
-print(response.text)
+for row in tunnels:
+    print ("Row:",row)
+    tunnelName=row+" - Tunnel1"
+    jsonPayload = {
+        "name": tunnelName,
+        "authenticationID":"zaphod@slivertea.com",
+        "authenticationPSK":"itSa$ecr4t",
+        "locationID": locationId
+        }
+    payload = json.dumps(jsonPayload)
+    print (uri)
+    response = requests.request("POST", uri, headers=headers, data=payload)
+    print(response.text)

@@ -9,7 +9,7 @@ method = 'locations/'
 params = ''
 uri = path+method
 locations = {}
-tunnels = {}
+
 
 # Adding new locations
 locations = ["API Location1a", "API Location2a", "API Location1c"]

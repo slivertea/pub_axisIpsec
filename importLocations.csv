@@ -1,4 +1,4 @@
 locationName,tunnelName,authenticationID,authenticationKey
 API Location1a,APIlocation1a-Tunnel,tunnela@testmy.net,$thisisaSpecialKey
-API Location2a,APIlocation2a-Tunnel,tunnela@testmy.net,$thisisaSpecialKey
+API Location2a,APIlocation2a-Tunnel,1.2.3.4,$thisisaSpecialKey
 API Location1c,APIlocation1c-Tunnel,tunnela@testmy.net,$thisisaSpecialKey

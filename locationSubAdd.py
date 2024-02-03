@@ -15,7 +15,7 @@ tunnels = {}
 
 # Post  payload
 # array test
-tstArray = ["API-location1a"]
+
 
 headers = {
     'Authorization': apiToken,

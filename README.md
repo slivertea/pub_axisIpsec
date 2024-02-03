@@ -10,9 +10,8 @@ _Repository Files_
 1. import*.csv - source files for location, tunnels, or sublocation
 2. **Add.py - python for executing a raw add, non-existing data yet in Axis
 3. **Get.py - python for collecting existing data already in Axis
-   Sample sub componants
-   readCSV.py -  sample csv read
-   tokenOs.py -   sample host environment read for safely injesting the API Key
+4.   readCSV.py -  sample csv read
+5.   tokenOs.py -   sample host environment read for safely injesting the API Key
 
 
 ## Requirements
