@@ -2,7 +2,7 @@ import json
 import requests
 import os
 
-TOKEN = os.getenv('VLAB_TOKEN')
+TOKEN = os.getenv('AXIS_TOKEN')
 apiToken = 'Bearer '+TOKEN
 path = "https://admin-api.axissecurity.com/api/v1.0/"
 # Use locationGet.py to collect this, or browser debug method "tunnels" matching the desired location

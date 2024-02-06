@@ -2,7 +2,7 @@ import requests
 import json
 import os
 
-TOKEN = os.getenv('VLAB_TOKEN')
+TOKEN = os.getenv('AXIS_TOKEN')
 apiToken = 'Bearer '+TOKEN
 locationsUrl = "https://admin-api.axissecurity.com/api/v1.0/locations?pageSize=100&pageNumber=1"
 
